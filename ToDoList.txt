@@ -1,0 +1,11 @@
+
+
+1. Aggiungere la variabile di media tra est_diameter_max e min e aggiungere 
+grafici vari
+
+2. Scrivere relazione su analisi univariata, prendendo variabile per variabile, 
+mostrando i grafici e valori interessanti e proponendo una descrizione testuale di 
+questi dati.
+
+3. Scrivere la relazione sull'analisi multivariata e chiedere a lore se ha altro
+da aggiungere
