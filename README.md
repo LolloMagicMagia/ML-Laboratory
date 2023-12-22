@@ -5,6 +5,20 @@ Studenti:
 - Lorenzo Monti 869960
 - Marco Gherardi 869138
 
+## Summary:
+- Descrizione del dominio di riferimento e obiettivi dell’elaborato[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#descrizione-del-dominio-di-riferimento-e-obiettivi-dellelaborato]
+- Scelte di design per la creazione del data set, eventuali ipotesi o assunzioni[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#scelte-di-design-per-la-creazione-del-data-set-eventuali-ipotesi-o-assunzioni]
+- Descrizione del dataset e relativa analisi esplorativa[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#descrizione-del-dataset-e-relativa-analisi-esplorativa]
+  - Descrizione delle variabili[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#descrizione-delle-variabili]
+  - Analisi esplorativa[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#analisi-esplorativa]
+    1) Comprensione del quadro generale[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#1-comprensione-del-quadro-generale]
+    2) Preparazione[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#2-preparazione]
+    3) Comprensione delle variabili[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#3-comprensione-delle-variabili-analisi-univariata]
+    4) Studio delle relazioni tra variabili[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#4-studio-delle-relazioni-tra-variabili]
+- Descrizione e motivazione dei modelli di machine learning scelti[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#descrizione-e-motivazione-dei-modelli-di-machine-learning-scelti-almeno-due-modelli]
+- Esperimenti: esecuzione di almeno una modalità di validazione e stima delle misure di performance[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#esperimenti-esecuzione-di-almeno-una-modalit%C3%A0-di-validazione-e-stima-delle-misure-di-performance]
+- Analisi dei risultati ottenuti[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#analisi-dei-risultati-ottenuti]
+- Conclusioni[https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#conclusioni]
 
 # Descrizione del dominio di riferimento e obiettivi dell’elaborato 
 
