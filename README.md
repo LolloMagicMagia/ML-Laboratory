@@ -1,9 +1,18 @@
 # ML-Laboratory
-Studenti:
+🚀 ML-Laboratory – Analisi e Predizione di Asteroidi Potenzialmente Pericolosi
+📍 Un progetto di machine learning per analizzare e prevedere il rischio di oggetti vicini alla Terra (Near-Earth Objects) sulla base di dati reali forniti dalla NASA.
 
-- Biancini Mattia 865966
-- Lorenzo Monti 869960
-- Marco Gherardi 869138
+##👨‍🎓 Team Members:
+Mattia Biancini – 865966
+Lorenzo Monti – 869960
+Marco Gherardi – 869138
+
+## 🧪 Technologies Used
+🐍 Python
+📓 Google Colab
+📊 Pandas, Matplotlib, Seaborn – EDA e visualizzazione
+🤖 Scikit-learn – ML models e visualizzazione
+🔗 GitHub – Version control e collaborazione
 
 ## Summary:
 - [Descrizione del dominio di riferimento e obiettivi dell’elaborato](https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#descrizione-del-dominio-di-riferimento-e-obiettivi-dellelaborato)
@@ -20,22 +29,20 @@ Studenti:
 - [Analisi dei risultati ottenuti](https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#analisi-dei-risultati-ottenuti)
 - [Conclusioni](https://github.com/MattiaBiancini/ML-Laboratory?tab=readme-ov-file#conclusioni)
 
-# Descrizione del dominio di riferimento e obiettivi dell’elaborato 
-
-
+### Descrizione del dominio di riferimento e obiettivi dell’elaborato 
 Nello spazio esterno esiste un numero infinito di oggetti. Alcuni di essi sono più vicini di quanto si possa pensare. Sebbene possa sembrare che una distanza di 70.000 km non possa potenzialmente arrecare danno, a scala astronomica questa rappresenta una distanza molto limitata e può interferire con numerosi fenomeni naturali. Tali oggetti/asteroidi possono dimostrarsi dannosi. Pertanto, è prudente conoscere ciò che ci circonda e identificare eventuali minacce tra di essi. Questo insieme di dati raccoglie l'elenco degli asteroidi certificati dalla NASA classificati come oggetti più vicini alla Terra.
 
 Obiettivo dell'elaborato è boh
 
 
-# Scelte di design per la creazione del data set, eventuali ipotesi o assunzioni
+### Scelte di design per la creazione del data set, eventuali ipotesi o assunzioni
 
 
 
 
-# Descrizione del dataset e relativa analisi esplorativa
+### Descrizione del dataset e relativa analisi esplorativa
 
-### Descrizione delle variabili
+#### Descrizione delle variabili
 
 | Variabile | Tipo | Contesto | Aspettativa | commenti |
 |-----------|------|----------|-------------|----------|
@@ -50,12 +57,12 @@ Obiettivo dell'elaborato è boh
 | **absolute_magnitude** | Float | Misura della luminosità intrinseca | Media |  |
 | **hazardous** | Bool | True se l'oggetto è considerato pericoloso, false altrimenti | Alta ||
 
-## Analisi esplorativa
+#### Analisi esplorativa
 
 L’analisi esplorativa del dato (exploratory data analysis, EDA) è di fondamentale importanza perché permette all’analista di conoscere a fondo il dataset sul quale lavora, stipulare o scartare ipotesi e creare dei modelli predittivi su basi solide.
 Si è deciso di suddividere questa fase nei seguenti punti: Comprensione del quadro generale, Preparazione, Comprensione delle variabili e Studio delle relazioni tra variabili
 
-### 1. Comprensione del quadro generale
+#### 1. Comprensione del quadro generale
 
 Il dataset ha dimensione di 90836 righe e 10 colonne, di seguito viene riportata una tabella descrittiva di alcuni tra i valori statistici fondamentali:
 <div>
@@ -151,23 +158,23 @@ Il dataset ha dimensione di 90836 righe e 10 colonne, di seguito viene riportata
 
 **Alucne osservazioni dei dati nella precedente tabella:**
 
-#### Dimensioni stimate
+##### Dimensioni stimate
 - La dimensione stimata degli oggetti celesti nel dataset varia notevolmente, con un diametro minimo che va da 0.000609 a 37.892650 e un diametro massimo che va da 0.001362 a 84.730541.
 
-#### Velocità relativa
+##### Velocità relativa
 - La velocità relativa degli oggetti celesti è abbastanza varia, con una media di circa 48,066 unità di misura e una deviazione standard di circa 25,293. La velocità minima registrata è di circa 203.35, mentre la massima è di circa 236,990.13.
 
-#### Distanza ravvicinata
+##### Distanza ravvicinata
 - La distanza più vicina alla quale gli oggetti celesti si avvicinano è compresa tra circa 6,745.53 e 74,798,650 unità di misura, con una media di circa 37,066,550. Questo indica una vasta gamma di distanze ravvicinate.
 
-#### Magnitudine assoluta
+##### Magnitudine assoluta
 - La magnitudine assoluta degli oggetti celesti varia da 9.23 a 33.2, con una media di circa 23.53. Questo fornisce informazioni sulla luminosità intrinseca degli oggetti celesti nel dataset.
 
-#### Variazione nei dati
+##### Variazione nei dati
 - Le deviazioni standard relativamente alte in alcune colonne indicano una significativa variazione nei dati. Ad esempio, la deviazione standard elevata nella colonna "relative_velocity" suggerisce una grande variabilità nelle velocità relative degli oggetti celesti.
 
 
-### 2. Preparazione
+#### 2. Preparazione
    
 In questa fase si vuole iniziare a pulire il dataset in modo da continuare l’analisi. Alcune delle domande che aiuteranno a comprendere se il dataset contiene elementi da modificare sono:
 
@@ -189,7 +196,7 @@ In questa fase si vuole iniziare a pulire il dataset in modo da continuare l’a
    
 
 
-### 3. Comprensione delle variabili (Analisi univariata)
+#### 3. Comprensione delle variabili (Analisi univariata)
 
 Fase utile nel comprendere e descrivere le variabili di interesse.
 
@@ -200,21 +207,21 @@ Fase utile nel comprendere e descrivere le variabili di interesse.
 
    
 
-### 4. Studio delle relazioni tra variabili
+#### 4. Studio delle relazioni tra variabili
 
 
 
 
-# Descrizione e motivazione dei modelli di machine learning scelti (almeno due modelli) 
+## Descrizione e motivazione dei modelli di machine learning scelti (almeno due modelli) 
 
 
 
-# Esperimenti: esecuzione di almeno una modalità di validazione e stima delle misure di performance
+## Esperimenti: esecuzione di almeno una modalità di validazione e stima delle misure di performance
 
 
 
-# Analisi dei risultati ottenuti
+## Analisi dei risultati ottenuti
 
 
 
-# Conclusioni 
+## Conclusioni 
