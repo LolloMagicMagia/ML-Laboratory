@@ -1,17 +1,22 @@
 # ML-Laboratory
 🚀 ML-Laboratory – Analisi e Predizione di Asteroidi Potenzialmente Pericolosi
+
 📍 Un progetto di machine learning per analizzare e prevedere il rischio di oggetti vicini alla Terra (Near-Earth Objects) sulla base di dati reali forniti dalla NASA.
 
-##👨‍🎓 Team Members:
+## 👨‍🎓 Team Members:
 Mattia Biancini – 865966
 Lorenzo Monti – 869960
 Marco Gherardi – 869138
 
 ## 🧪 Technologies Used
 🐍 Python
+
 📓 Google Colab
+
 📊 Pandas, Matplotlib, Seaborn – EDA e visualizzazione
+
 🤖 Scikit-learn – ML models e visualizzazione
+
 🔗 GitHub – Version control e collaborazione
 
 ## Summary:
@@ -32,13 +37,7 @@ Marco Gherardi – 869138
 ### Descrizione del dominio di riferimento e obiettivi dell’elaborato 
 Nello spazio esterno esiste un numero infinito di oggetti. Alcuni di essi sono più vicini di quanto si possa pensare. Sebbene possa sembrare che una distanza di 70.000 km non possa potenzialmente arrecare danno, a scala astronomica questa rappresenta una distanza molto limitata e può interferire con numerosi fenomeni naturali. Tali oggetti/asteroidi possono dimostrarsi dannosi. Pertanto, è prudente conoscere ciò che ci circonda e identificare eventuali minacce tra di essi. Questo insieme di dati raccoglie l'elenco degli asteroidi certificati dalla NASA classificati come oggetti più vicini alla Terra.
 
-Obiettivo dell'elaborato è boh
-
-
-### Scelte di design per la creazione del data set, eventuali ipotesi o assunzioni
-
-
-
+Obiettivo dell'elaborato sara' addestrare un modello di ML il quale riuscira' a predirre quando un oggetto e' pericoloso o meno.
 
 ### Descrizione del dataset e relativa analisi esplorativa
 
@@ -198,11 +197,32 @@ In questa fase si vuole iniziare a pulire il dataset in modo da continuare l’a
 
 #### 3. Comprensione delle variabili (Analisi univariata)
 
-Fase utile nel comprendere e descrivere le variabili di interesse.
+![Alt text](Images/Grafico_torta_distribuzione_hazardous.png)
 
-**hazardous**
 
-![Alt text](images/Grafico_torta_distribuzione_hazardous.png)
+Questa fase è fondamentale per comprendere e descrivere nel dettaglio le variabili di interesse all’interno del dataset. L’obiettivo principale è quello di analizzare la distribuzione delle singole feature, inclusa la variabile target (label), al fine di ottenere una visione più chiara della natura del problema che stiamo affrontando.
+
+Attraverso l’esame della distribuzione delle variabili, possiamo:
+
+- Individuare eventuali anomalie o valori atipici (outlier);
+
+- Comprendere se i dati sono bilanciati o sbilanciati (nel caso di classificazione);
+
+- Valutare la necessità di trasformazioni o normalizzazioni;
+
+- Porre le basi per osservazioni più approfondite e per scelte modellistiche più consapevoli.
+
+- Distribuzioni fortemente asimmetriche possono suggerire la presenza di outlier o di variabili non normalizzate.
+
+- Classi sbilanciate e quindi servira' l'utilizzo di uno studio piu' approfondito su come andare a utilizzare le istanze al meglio
+
+
+🔍 E quindi guidare scelte appropriate di preprocessing:
+
+Se la variabile è fortemente asimmetrica, può essere utile applicare una trasformazione (es. logaritmica o Box-Cox) per renderla più vicina a una distribuzione normale.
+
+Alcuni algoritmi di machine learning (come la regressione lineare o la SVM) assumono distribuzioni gaussiane, e quindi beneficiano di dati normalizzati.
+
 
 
    
