@@ -61,7 +61,7 @@ Obiettivo dell'elaborato sara' addestrare un modello di ML il quale riuscira' a 
 L’analisi esplorativa del dato (exploratory data analysis, EDA) è di fondamentale importanza perché permette all’analista di conoscere a fondo il dataset sul quale lavora, stipulare o scartare ipotesi e creare dei modelli predittivi su basi solide.
 Si è deciso di suddividere questa fase nei seguenti punti: Comprensione del quadro generale, Preparazione, Comprensione delle variabili e Studio delle relazioni tra variabili
 
-#### 1. Comprensione del quadro generale
+#### ✅ 1. Comprensione del quadro generale
 
 Il dataset ha dimensione di 90836 righe e 10 colonne, di seguito viene riportata una tabella descrittiva di alcuni tra i valori statistici fondamentali:
 <div>
@@ -173,13 +173,13 @@ Il dataset ha dimensione di 90836 righe e 10 colonne, di seguito viene riportata
 - Le deviazioni standard relativamente alte in alcune colonne indicano una significativa variazione nei dati. Ad esempio, la deviazione standard elevata nella colonna "relative_velocity" suggerisce una grande variabilità nelle velocità relative degli oggetti celesti.
 
 
-#### 2. Preparazione
+#### 🔧 2. Preparazione
    
 In questa fase si vuole iniziare a pulire il dataset in modo da continuare l’analisi. Alcune delle domande che aiuteranno a comprendere se il dataset contiene elementi da modificare sono:
 
 1. **esistono variabili inutili o ridondanti?** 
 
-    Si, ad esempio è evidente che le variabili sentry_object e orbiting_body hanno lo stesso valore per ogni dato nel dataset, inoltre le variabili id e name servono entrmabe ad identificare un oggetto specifico. Per avere un dataset maggiormente ordinato e privi di variabili che non saranno oggetto di analisi, procederemo rimuovendo dal dataset òe varibili sentry_object, orbiting_body e name.
+    Si, ad esempio è evidente che le variabili centry_object e orbiting_body hanno lo stesso valore per ogni dato nel dataset, inoltre le variabili id e name servono entrmabe ad identificare un oggetto specifico. Per avere un dataset maggiormente ordinato e privi di variabili che non saranno oggetto di analisi, procederemo rimuovendo dal dataset òe varibili sentry_object, orbiting_body e name.
 
 
 2. **Ci sono delle colonne duplicate?**
@@ -195,7 +195,7 @@ In questa fase si vuole iniziare a pulire il dataset in modo da continuare l’a
    
 
 
-#### 3. Comprensione delle variabili (Analisi univariata)
+#### 🔍 3. Comprensione delle variabili (Analisi univariata)
 
 ![Alt text](Images/Grafico_torta_distribuzione_hazardous.png)
 
@@ -225,23 +225,67 @@ Alcuni algoritmi di machine learning (come la regressione lineare o la SVM) assu
 
 
 
-   
+#### 🔗 4. Studio delle relazioni tra variabili
 
-#### 4. Studio delle relazioni tra variabili
+Per quanto riguarda lo studio delle relazioni tra le variabili, abbiamo condotto diverse analisi esplorative con l’obiettivo di individuare eventuali pattern significativi e dipendenze statistiche tra le feature e la variabile target hazardous.
 
+In particolare, ci siamo concentrati su:
 
+L’analisi di correlazione, per osservare le relazioni lineari tra le variabili numeriche e identificare quelle potenzialmente più informative;
 
+La distribuzione dei valori di hazardous, per comprendere in quali intervalli delle feature si concentra la presenza di oggetti potenzialmente pericolosi;
 
-## Descrizione e motivazione dei modelli di machine learning scelti (almeno due modelli) 
+Box plot tra hazardous e le variabili numeriche, utili per visualizzare eventuali differenze di distribuzione tra i due gruppi (True e False) e rilevare la presenza di schemi ripetuti o valori anomali.
 
-
-
-## Esperimenti: esecuzione di almeno una modalità di validazione e stima delle misure di performance
-
-
-
-## Analisi dei risultati ottenuti
+Attraverso queste analisi, abbiamo cercato di individuare segnali che potessero suggerire la presenza di relazioni utili da sfruttare in fase di modellazione predittiva.
 
 
+### 🤖 Descrizione e Motivazione dei Modelli di Machine Learning Scelti
+In questa sezione si presentano i modelli di machine learning utilizzati per affrontare il problema di classificazione degli oggetti celesti potenzialmente pericolosi (hazardous). L’obiettivo è valutare le performance predittive su una variabile binaria (hazardous = True/False), ottimizzando la capacità del modello di distinguere correttamente tra le due classi.
 
-## Conclusioni 
+Sono stati selezionati e confrontati due modelli principali:
+
+🌳 1. Albero di Decisione (Decision Tree Classifier)
+L’albero di decisione è stato scelto per la sua semplicità interpretativa e per la capacità di modellare decisioni non lineari. Abbiamo agito sulla profondità massima e sul numero minimo di campioni per nodo al fine di regolare la complessità del modello e prevenire fenomeni di overfitting.
+
+✅ Motivazioni:
+
+Facilità di interpretazione visiva del processo decisionale;
+
+Buone prestazioni su dataset con feature eterogenee;
+
+🧠 2. Rete Neurale Multistrato (MLP – Multi-layer Perceptron)
+Il secondo modello adottato è una rete neurale di tipo MLPClassifier. Questo modello, grazie alla sua struttura a più layer, è in grado di apprendere rappresentazioni complesse e non lineari dei dati. È stato configurato variando il numero di neuroni nei layer nascosti e la funzione di attivazione, nonché il numero di iterazioni massime.
+
+✅ Motivazioni:
+
+Capacità di catturare relazioni complesse;
+
+Flessibilità e adattabilità a diverse distribuzioni;
+
+Possibilità di migliorare le prestazioni tramite tuning accurato.
+
+🔁 Validazione e Confronto dei Modelli
+Per garantire una valutazione robusta e imparziale, è stata applicata la validazione incrociata (cross-validation) su entrambi i modelli, permettendo una stima più accurata delle loro prestazioni medie.
+
+Abbiamo analizzato le metriche di classificazione principali:
+
+Precisione
+
+Recall
+
+F1-score
+
+Accuratezza
+
+Media macro e ponderata
+
+### 📊 Conclusioni dal Confronto
+
+Il secondo modello (MLP) mostra una precisione elevata per la Classe 0 (oggetti non pericolosi), ma una recall più bassa rispetto al primo modello.
+
+Per la Classe 1 (oggetti pericolosi), la rete neurale evidenzia una recall molto alta, ma una precisione significativamente bassa: ciò significa che tende a classificare molte istanze come pericolose, includendo anche falsi positivi.
+
+L’albero decisionale, invece, mostra prestazioni più bilanciate tra precisione e recall per entrambe le classi.
+
+La media macro ponderata conferma che, complessivamente, le performance del primo modello sono leggermente superiori in termini di equilibrio generale.
