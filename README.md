@@ -3,6 +3,8 @@
 
 📍 Un progetto di machine learning per analizzare e prevedere il rischio di oggetti vicini alla Terra (Near-Earth Objects) sulla base di dati reali forniti dalla NASA.
 
+📓 [Source of the dataset](https://www.kaggle.com/datasets/shrutimehta/nasa-asteroids-classification)
+
 ## 👨‍🎓 Team Members:
 Mattia Biancini – 865966
 Lorenzo Monti – 869960
